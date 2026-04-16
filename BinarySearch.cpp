@@ -80,5 +80,25 @@ void binarySearch()
         cout << "Masukkan elemen yang ingin dicari: ";
         cin >> x;
 
+        int low = 0;
+        int high = nPanjang - 1;
+
+        do
+        {
+            int mid = (low + high) / 2;
+
+            if (element[mid] == x)
+            {
+                cout << "\n[✓] Elemen " << x << " ditemukan pada indeks " << mid << "\n";
+                break;
+            }
+            else if (x < element[mid])
+            {
+                high = mid - 1;
+            }
+            else
+            {
+                low = mid + 1;
+            }
 
 }
